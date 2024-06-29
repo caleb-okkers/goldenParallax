@@ -11,7 +11,7 @@ body {
     transform-style: preserve-3d;
     overflow-x: hidden;
     overflow-y: auto; /* Allows scrolling */
-    background: rgb(29, 29, 29);
+    background: #050505;
 }
 
 .video-background {
@@ -58,26 +58,27 @@ body {
 }
 
 .section1 .text {
-    font-family: "Changa", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-    font-size: 3vw;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2vw;
     /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgba(255, 255, 255, 0.5); */
-    text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 4px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.5);
 }
 
 .section1 .home-image img {
-    width: 150px;
+    width: 200px;
     height: auto;
     /* margin-top: 20px; */
     /* border-radius: 10%; */
     padding: 10px;
+    opacity: 0.85;
 }
 
 .home-image {
     position: relative;
-    width: 160px;
+    width: 210px;
     height: 210px;
     display: flex;
     justify-content: center;
@@ -138,15 +139,19 @@ body {
 
 
 .section2 {
-    background: #000;
+    /* background: #060c21; */
+    background: #050505;
     display: flex;
     justify-content: center;
 }
 
 .section2 .text {
     color: #000;
-    font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
-    font-size: 5vw;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 4vw;
     /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgba(255, 255, 255, 0.5); */
     padding-top: 3rem;
     text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.3);
