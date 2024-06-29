@@ -1,66 +1,153 @@
-html {
-    height: 100vh;
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900');
+
+html, body {
+    height: 100%;
+    margin: 0;
     overflow: hidden;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    background: #222;
     perspective: 1px;
     transform-style: preserve-3d;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto; /* Allows scrolling */
+    background: rgb(29, 29, 29);
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-1px) scale(2);
 }
 
 .section1, .section2 {
+    position: relative;
     width: 100%;
     min-height: 100vh;
-    position: relative;
     transform-style: preserve-3d;
 }
 
 .section1::before {
     content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
-    background: url('') center;
     background-size: cover;
     transform: translateZ(-1px) scale(2);
-    /* filter: blur(1px); */
 }
 
-/* .section1::after {
-    content: "";
-    width: 100%;
-    height: 100%;
+.section1 .content {
     position: absolute;
-    background: url('https://github.com/caleb-okkers/parallax/blob/master/images/IMG_2711_layer%201.png?raw=true') center;
-    background-size: cover;
-} */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(0.5px);
+    text-align: center;
+    color: #000;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .section1 .text {
-    top: 0%;
-    transform: translateZ(-0.5px) scale(1.5, 1.6) translate(-33%, 5%);
+    font-family: "Changa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+    font-size: 3vw;
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgba(255, 255, 255, 0.5); */
+    text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.5);
 }
 
-.section2 {
-    background: rgb(68, 35, 19);
+.section1 .home-image img {
+    width: 150px;
+    height: auto;
+    /* margin-top: 20px; */
+    /* border-radius: 10%; */
+    padding: 10px;
 }
 
-.text {
-    width: 100%;
+.home-image {
+    position: relative;
+    width: 160px;
+    height: 210px;
     display: flex;
     justify-content: center;
-    top: 10%;
-    left: 50%;
-    position: absolute;
-    font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
-    font-size: 10vw;
-    color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgb(255, 255, 255, 0.5) ;
-    transform: scale(1, 1.1) translate(-50%, 10%);
+    align-items: center;
+    margin: 10px;
+    transition: 0.5s;
+    background: #000;
 }
 
+.home-image::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+
+}
+
+.home-image::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+
+}
+
+.home-image .profile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.home-image .profile img {
+    max-width: 100%;
+    /* opacity: 0.4; */
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.home-image::before,
+.home-image::after {
+    background: linear-gradient(235deg, #B8860B, #010615, #B8860B);
+}
+
+
+
+.section2 {
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.section2 .text {
+    color: #000;
+    font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5vw;
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 5px 5px 70px rgba(255, 255, 255, 0.5); */
+    padding-top: 3rem;
+    text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.3);
+}
